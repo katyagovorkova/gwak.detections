@@ -5,14 +5,10 @@
 -->
 <html>
   <head>
-    <title>Anomaly detection at 40 MHz: Data challenge</title>
+    <title>GWAK detections</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <script>
-                !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-                posthog.init('phc_sOP2e7XELOKn4kXPgzjV2L6VSi5JuGPP0RhsIt2rRVF',{api_host:'https://app.posthog.com'})
-                </script>
   </head>
 
   <body class="is-preload">
@@ -20,20 +16,10 @@
     <header id="header">
 
       <div class="inner">
-<!--          <a href="#" class="image avatar"><img src="images/logo.png" alt="" /></a> -->
           <h1><strong>Welcome to the <br />
-            Anomaly Detection <br />
-            Data Challenge 2021!</strong></h1>
+            Collection of Anomalies <br />
+            Detected by the GWAK pipeline</strong></h1>
       </div>
-
-<!--      <div class="right">
-        <ul class="selector">
-          <li><a href="https://zenodo.org/record/5046389#.YNyCfi0Rpqs" class="button">Dataset</a></li>
-          <li><a href="https://zenodo.org/record/" class="button">Data Reader</a></li>
-          <li><a href="https://zenodo.org/record/" class="button">Models</a></li>
-          <li><a href="https://github.com/mpp-hep/ADC2021-results" class="button">Upload contribution!</a></li>
-        </ul>
-      </div> -->
 
     </header>
 
@@ -106,108 +92,8 @@
                     <li><a href="https://zenodo.org/record/7152614#.YOLJ8m6xXfY" class="button" style="width:230px;">BSM Dataset: h<sup>0</sup> to &tau;&tau;</a></li>
                     <li><a href="https://zenodo.org/record/7152617#.YOLLU26xVbU" class="button" style="width:230px;">BSM Dataset: h<sup>+</sup> to &tau;&nu;</a></li>
               </ul>
-                    <!---ul class="actions">
-                <li><a href="https://github.com/anomalyHackathon/L1_anomalyDetection/" class="button">Code: Data Reader</a></li>
-                <li><a href="https://github.com/anomalyHackathon/L1_anomalyDetection/" class="button">Code: Example architecture</a></li>
-              </ul--->
-
-              <!---header class="minor">
-              <h2>The <span style="font-family:'Courier New'">hls4ml</span> library</h2>
-                    </header--->
-
-
-            <header class="minor">
-              <h2>How to submit a contribution</h2>
-            </header>
-            In order to participate in the challenge, you need to evaluate your model on the blackbox dataset,
-            containing a mixture of Standard Model and New Physics events. Each team will be asked to submit
-            the list of the 10<sup>-5</sup> fraction of events passing a selection on the algorithm metrics as well as the total number of FLOPS for the architecture.
-            We also encourage the teams to achieve a full design for deployment on FPGAs to obtain a more precise estimate
-            of the feasibility for your algorithm to run in the L1 trigger. The design can be achieved through <span style="font-family:'Courier New'">hls4ml</span> (see tutorials and other resources below) or other tools.
-            In this case, the team will also submit the estimated performance on the FPGA in terms of latency and resources.
-            Note that while the tool support the translation for the building blocks of most of the popular DL architectures, more custom ingredients might be missing.
-            In this case, the <span style="font-family:'Courier New'">hls4ml</span> developers team can help on a best-effort basis.
-            The submission should be in a form of a HDF5 file containing a numpy array with the identification numbers of each selected event, plus a dictionary with the algorithm deployment performance, as shown in this <a href="https://github.com/mpp-hep/ADC2021-results/blob/master/upload-your-data.py">example</a>.
-            The name of the file should be unique and correspond to a participant/group name. Email us to confirm you have submit your contribution! <strong> Deadline: ML4Jets 2022! </strong>
-            <br><br />
-            <ul class="actions">
-                <li><a href="https://github.com/mpp-hep/ADC2021-results" class="button">Upload contribution!</a></li>
-              </ul>
-            <br />
-              <strong> Good luck! </strong>
-            <br />
-                   <strong> Deadline: ML4Jets 2022! </strong>
-
 
           </section>
-
-        <section id="features">
-          <div class="container">
-            <header>
-              <h2><strong>Further Reading</strong></h2>
-            </header>
-            <div class="row aln-center">
-              <!-- Feature -->
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://arxiv.org/abs/2006.10159" class="image fit thumb image"><img src="images/pynq_floorplan_final.jpeg" alt="" height='100'/></a>
-                  <header>
-                    <h3><span style="font-family:'Courier New'">hls4ml</span><br /> and Google QKeras</h3>
-                  </header>
-                </section>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://arxiv.org/search/?query=hls4ml&searchtype=all&source=header" class="image fit thumb image"><img src="images/hls4ml-arxiv.png" alt="" height='100'/></a>
-                  <header>
-                    <h3><span style="font-family:'Courier New'">hls4ml</span>:<br /> published work</h3>
-                  </header>
-                </section>
-              </div>
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://fastmachinelearning.org/hls4ml/index.html" class="image fit thumb image"><img src="images/hls4ml-doc.png" alt="" height='100'/></a>
-                  <header>
-                    <h3><span style="font-family:'Courier New'">hls4ml</span>:<br /> library documentation</h3>
-                  </header>
-<!--                  <p>An overview over the hls4ml project</p> -->
-                </section>
-              </div>
-              <!-- Feature end -->
-              <!-- Feature -->
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://www.youtube.com/watch?v=0fe_e5OEF54" class="image fit thumb image"><img src="images/hls4ml-tutorial.png" alt=""  height='100'/></a>
-                  <header>
-                    <h3><span style="font-family:'Courier New'">hls4ml</span>:<br /> video tutorial</h3>
-                  </header>
-<!--                  <p>Jupyter notebooks on how to design ML firmware with hls4ml</p> -->
-                </section>
-              </div>
-              <!-- Feature end -->
-              <!-- Feature -->
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://github.com/fastmachinelearning/hls4ml-tutorial" class="image fit thumb image"><img src="images/hls4ml-code.png" alt=""  height='100'/></a>
-                  <header>
-                    <h3><span style="font-family:'Courier New'">hls4ml</span>:<br /> notebooks</h3>
-                  </header>
-<!--                  <p>Jupyter notebooks on how to design ML firmware with hls4ml</p> -->
-                </section>
-              </div>
-              <!-- Feature end -->
-              <div class="col-4 col-6-medium col-12-small">
-                <section>
-                  <a href="https://indico.cern.ch/event/1025534/" class="image fit thumb image"><img src="images/iml.png" alt="" height='100' /></a>
-                  <header>
-                    <h3> Anomaly Detection:<br /> AD @ 40 MHz</h3>
-                  </header>
-<!--                  <p>A talk on 40 MHz anomaly detection at IML</p> -->
-                </section>
-              </div>
-              <!-- Feature end -->
-            </div>
-        </section>
 
         <!-- Three -->
           <section id="three">
@@ -230,19 +116,15 @@
                 <ul class="labeled-icons">
                   <li>
                     <h3 class="icon fa-home"><span class="label">Address</span></h3>
-                    machine learning for Particle Physics (mPP)
+                    ML4GW
                   </li>
                   <li>
                     <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-                    <a href="#">ekaterina.govorkova@cern.ch</a>
+                    <a href="#">katyag@mit.edu</a>
                     <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-                    <a href="#">ema.puljak@cern.ch</a>
+                    <a href="#">rraikman@mit.edu</a>
                     <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-                    <a href="#">jennifer.ngadiuba@cern.ch</a>
-                    <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-                    <a href="#">maurizio.pierini@cern.ch</a>
-                    <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-                    <a href="#">thea.aarrestad@cern.ch</a>
+                    <a href="#">emoreno@mit.edu</a>
                   </li>
                 </ul>
               </div>
