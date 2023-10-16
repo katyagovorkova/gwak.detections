@@ -2581,7 +2581,7 @@ input, select, textarea {
         left: 0;
         padding: 8em 4em;
         position: fixed;
-        text-align: right;
+        text-align: left;
         top: 0;
         width: 35%;
     }
