@@ -1,1 +1,0 @@
-# gwak.detections.github.io
