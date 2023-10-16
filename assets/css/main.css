@@ -83,7 +83,13 @@ input, select, textarea {
     }
 
     body {
-        background: #B18CA7;
+        background: #2f312f;
+    }
+
+    .avo {
+        font-size: 150px;
+        z-index: -1;
+        position: absolute;
     }
 
         body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2572,16 +2578,17 @@ input, select, textarea {
         justify-content: space-between;
         background-color: #B18CA7;
         background-attachment: scroll;
-        background-image: url("../../images/front.png");
         background-position: top left;
         background-repeat: no-repeat;
+        background: rgb(244,106,200);
+        background: linear-gradient(320deg, rgba(244,106,200,1) 0%, rgba(148,233,166,1) 100%);
         background-size: contain;
         color: rgba(255, 255, 255, 0.0);
         height: 100%;
         left: 0;
         padding: 8em 4em;
         position: fixed;
-        text-align: left;
+        text-align: right;
         top: 0;
         width: 35%;
     }
