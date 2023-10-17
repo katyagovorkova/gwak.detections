@@ -2586,11 +2586,11 @@ input, select, textarea {
         color: rgba(255, 255, 255, 0.0);
         height: 100%;
         left: 0;
-        padding: 8em 4em;
+        padding: 4em 1em;
         position: fixed;
         text-align: right;
         top: 0;
-        width: 35%;
+        width: 18%;
     }
 
         #header > * {
@@ -2668,10 +2668,10 @@ input, select, textarea {
 /* Main */
 
     #main {
-        margin-left: 35%;
+        margin-left: 18%;
         max-width: 54em;
         padding: 8em 4em 4em 4em;
-        width: calc(100% - 35%);
+        width: calc(100% - 18%);
     }
 
         #main > section {
