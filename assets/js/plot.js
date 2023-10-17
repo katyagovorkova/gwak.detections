@@ -1,16 +1,19 @@
-
-fetch('data.json').then((res) => res.json()).then((data) => {
     const layout = {
-        title: "GPS Data",
+        title: "GWAK Detections",
         xaxis: {
             title: "Date"
         },
         yaxis: {
-            title: "Value"
+            title: "FAR"
         }
     };
 
+let go_fetch=(filename)=>{
+fetch(filename).then((res) => res.json()).then((data) => {
+
+
     Plotly.newPlot('plot', data, layout);
+
     document.getElementById('plot').on('plotly_click', function(data){
 
         var pts = '';
@@ -23,6 +26,29 @@ fetch('data.json').then((res) => res.json()).then((data) => {
 
     });
 });
+}
+let boolean = true
+let ds_selection = ()=> {
+    if (boolean){
+        document.getElementsByClassName("button")[0].innerHTML = "bryan lol"
+        go_fetch('data_ryan.json')
+    }
+    else{
+        document.getElementsByClassName("button")[0].innerHTML = "moreno"
+        go_fetch('data_moreno.json')
+    }
+}
+
+document.getElementsByClassName("button")[0].addEventListener('click', function(){
+
+    boolean = !boolean
+    ds_selection();
+
+
+})
+
+    ds_selection();
+
 
 function show_image(src){
     const backdrop = document.createElement('div');
