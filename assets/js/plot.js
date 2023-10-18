@@ -7,7 +7,9 @@ const layout = {
             title: "Date"
         },
         yaxis: {
-            title: "FAR"
+            title: "FAR",
+            tickvals: [1./60., 1./3600., 1./86400.,  0.5/86400., 1./604876.71234816, 1./2628336.2137829, 1./3.154e+7],
+            ticktext: ['1/minute', '1/hour', '1/day','1/2 days', '1/week', '1/month', '1/year']
         }
     };
 
@@ -26,17 +28,7 @@ const layout = {
     });
 });
 }
-// let boolean = true
-// let ds_selection = ()=> {
-//     if (boolean){
-//         document.getElementsByClassName("button")[0].innerHTML = "O3a analysis"
-//         go_fetch('data_ryan.json', 'O3a GWAK Detections')
-//     }
-//     else{
-//         document.getElementsByClassName("button")[1].innerHTML = "BURST Challenge"
-//         go_fetch('data_moreno.json', 'Burst GWAK Detections')
-//     }
-// }
+
 
 document.getElementsByClassName("button")[0].addEventListener('click', function(){
     document.getElementsByClassName("button")[0].innerHTML = "O3a analysis"
