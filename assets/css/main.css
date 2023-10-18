@@ -2595,8 +2595,8 @@ input, select, textarea {
         background-attachment: scroll;
         background-position: top left;
         background-repeat: no-repeat;
-        background: rgb(251,103,204);
-        background: linear-gradient(320deg, rgba(251,103,204,1) 0%, rgba(151,179,76,1) 51%);
+        background: rgb(251,103,162);
+        background: linear-gradient(320deg, rgba(251,103,162,1) 0%, rgba(151,179,76,1) 51%);
         background-size: contain;
         color: rgba(255, 255, 255, 0.0);
         height: 100%;
