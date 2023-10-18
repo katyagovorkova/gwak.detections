@@ -1,5 +1,8 @@
-    const layout = {
-        title: "GWAK Detections",
+let go_fetch=(filename, title)=>{
+fetch(filename).then((res) => res.json()).then((data) => {
+
+const layout = {
+        title: title,
         xaxis: {
             title: "Date"
         },
@@ -7,10 +10,6 @@
             title: "FAR"
         }
     };
-
-let go_fetch=(filename)=>{
-fetch(filename).then((res) => res.json()).then((data) => {
-
 
     Plotly.newPlot('plot', data, layout);
 
@@ -27,27 +26,28 @@ fetch(filename).then((res) => res.json()).then((data) => {
     });
 });
 }
-let boolean = true
-let ds_selection = ()=> {
-    if (boolean){
-        document.getElementsByClassName("button")[0].innerHTML = "bryan lol"
-        go_fetch('data_ryan.json')
-    }
-    else{
-        document.getElementsByClassName("button")[0].innerHTML = "moreno"
-        go_fetch('data_moreno.json')
-    }
-}
+// let boolean = true
+// let ds_selection = ()=> {
+//     if (boolean){
+//         document.getElementsByClassName("button")[0].innerHTML = "O3a analysis"
+//         go_fetch('data_ryan.json', 'O3a GWAK Detections')
+//     }
+//     else{
+//         document.getElementsByClassName("button")[1].innerHTML = "BURST Challenge"
+//         go_fetch('data_moreno.json', 'Burst GWAK Detections')
+//     }
+// }
 
 document.getElementsByClassName("button")[0].addEventListener('click', function(){
-
-    boolean = !boolean
-    ds_selection();
-
-
+    document.getElementsByClassName("button")[0].innerHTML = "O3a analysis"
+    go_fetch('data_ryan.json', 'O3a GWAK Detections')
 })
-
-    ds_selection();
+document.getElementsByClassName("button")[1].addEventListener('click', function(){
+    document.getElementsByClassName("button")[1].innerHTML = "BURST Challenge"
+    go_fetch('data_moreno.json', 'Burst GWAK Detections')
+})
+document.getElementsByClassName("button")[0].innerHTML = "O3a analysis"
+go_fetch('data_ryan.json', 'O3a GWAK Detections')
 
 
 function show_image(src){
